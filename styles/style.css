@@ -170,7 +170,7 @@
 }
 
 .card__section:nth-child(2) .card__section-img {
-  filter: brightness(130%);
+  filter: brightness(130%) sepia(50%);
 }
 
 .card__section:nth-child(3) .card__section-img {
@@ -310,7 +310,7 @@
 	inline-size: 0;
 	block-size: 100%;
 	background-color: var(--accent-color);
-	transition: all 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
 }
 
 .button-hover:hover::before {
@@ -378,11 +378,6 @@
 
 .like-icon.is-liked .sparks {
   animation: sparks-animation 0.3s 0.3s ease-in alternate;
-}
-
-.like-icon.is-liked .core {
-  transition: fill 0.3s ease-in-out 0.03s;
-  fill: var(--heart-sparks-color);
 }
 
 
