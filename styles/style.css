@@ -39,7 +39,7 @@
 }
 
 .header {
-  inline-size: clamp(23.4375rem, 16.3292rem + 30.3286vw, 43.625rem);
+  inline-size: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
   background-color: var(--bg-color, #FFFFFF);
   block-size: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
   margin: auto;
@@ -133,7 +133,7 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  inline-size: clamp(23.4375rem, 16.3292rem + 30.3286vw, 43.625rem);
+  inline-size: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
 }
 
 .card__section {
@@ -141,6 +141,7 @@
   background-color: var(--bg-color, #FFFFFF);
   margin-block-end: 50px;
   position: relative;
+
 }
 
 .card__section-title {
