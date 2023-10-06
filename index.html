@@ -9,8 +9,8 @@
     <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./images/favicon.png">
     <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
@@ -19,7 +19,7 @@
   <body class="page">
     <header class="header">
       <h1 class="header-heading__main">&lt;/html&gt;</h1>
-      <h2 class="header-heading__secondary">закрывающий тег</h2>
+      <p class="header-heading__secondary">закрывающий тег</p>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -48,7 +48,7 @@
     </header>
     <main class="main__content-section">
       <article class="card__section">
-        <h3 class="card__section-title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+        <h2 class="card__section-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <div class="img-container">
           <img src="./images/waiting.jpg" alt="Мистер Бин в ожидании" class="card__section-img img__filter">
           <p class="card__image-label">&lt;start&gt;</p>
@@ -82,7 +82,7 @@
         </section>
       </article>
       <article class="card__section">
-        <h3 class="card__section-title">1 спринт: Я — чистый лист</h3>
+        <h2 class="card__section-title">1 спринт: Я — чистый лист</h2>
         <div class="img-container">
           <img src="./images/fear.jpg" alt="Картинка приведения в цветах" class="card__section-img img__filter">
           <p class="card__image-label">&lt;fear&gt;</p>
@@ -116,7 +116,7 @@
         </section>
       </article>
       <article class="card__section">
-        <h3 class="card__section-title">1 спринт: А если не получится?</h3>
+        <h2 class="card__section-title">1 спринт: А если не получится?</h2>
         <div class="img-container">
           <img src="./images/confidence.jpg" alt="Картинка звезд на воде" class="card__section-img img__filter">
           <p class="card__image-label">&lt;confidence&gt;</p>
@@ -150,7 +150,7 @@
         </section>
       </article>
       <article class="card__section">
-        <h3 class="card__section-title">2 спринт: Погоня за идеалом</h3>
+        <h2 class="card__section-title">2 спринт: Погоня за идеалом</h2>
         <div class="img-container">
           <img src="./images/perfect.jpg" alt="Картинка приведения в очках и с книгой на голове" class="card__section-img img__filter">
           <p class="card__image-label">&lt;perfect&gt;</p>
@@ -184,7 +184,7 @@
         </section>
       </article>
       <article class="card__section">
-        <h3 class="card__section-title">2 спринт: О тех, кто рядом</h3>
+        <h2 class="card__section-title">2 спринт: О тех, кто рядом</h2>
         <div class="img-container">
           <img src="./images/support.jpg" alt="Картинка человека, взбирающийся по лестнице" class="card__section-img img__filter">
           <p class="card__image-label">care</p>
@@ -218,7 +218,7 @@
         </section>
       </article>
       <article class="card__section">
-        <h3 class="card__section-title">3 спринт: Обходные стратегии</h3>
+        <h2 class="card__section-title">3 спринт: Обходные стратегии</h2>
         <div class="img-container">
           <img src="./images/curiosity.jpg" alt="Пиксельная картинка автобуса" class="card__section-img img__filter">
           <p class="card__image-label">curiosity</p>
@@ -252,7 +252,7 @@
         </section>
       </article>
       <article class="card__section">
-        <h3 class="card__section-title">3 спринт: Когда опускаются руки</h3>
+        <h2 class="card__section-title">3 спринт: Когда опускаются руки</h2>
         <div class="img-container">
           <img src="./images/sad.jpg" alt="Пиксельная картинка автобуса" class="card__section-img img__filter">
           <p class="card__image-label">&lt;headache&gt;</p>
@@ -286,7 +286,7 @@
         </section>
       </article>
       <article class="card__section">
-        <h3 class="card__section-title">«Сейчас я здесь»</h3>
+        <h2 class="card__section-title">«Сейчас я здесь»</h2>
         <div class="img-container">
           <img src="./images/free.jpg" alt="Картинка машину, уезжающей вдаль" class="card__section-img img__filter">
           <p class="card__image-label">&lt;endless world&gt;</p>
@@ -332,16 +332,16 @@
         </span>
       </button>
       
-      <dialog id="dialog" class="modal-dialog">
-        <svg class="save-icon-modal" viewBox="0 0 21 21">
-          <use href="./svg/floppy.svg#save-icon"></use>
-        </svg>
-        <p class="modal-text">Вставьте дискету, чтобы продолжить</p>
-        <button 
-        type="button" 
-        onclick="window['dialog'].close()" class="close-button button-hover">
-        <span class="button-text">Ок</span>
-      </button>
+      <dialog id="dialog">
+        <form method="dialog" class="modal-dialog">
+          <svg class="save-icon-modal" viewBox="0 0 21 21">
+            <use href="./svg/floppy.svg#save-icon"></use>
+          </svg>
+          <p class="modal-text">Вставьте дискету, чтобы продолжить</p>
+          <button class="close-button button-hover">
+          <span class="button-text">Ок</span>
+        </button>
+        </form>
     </dialog>
 
     </main>

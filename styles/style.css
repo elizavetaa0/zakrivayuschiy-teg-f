@@ -16,16 +16,16 @@
 
 @supports (font-variation-settings: normal) {
   body {
-    font-family: 'Inter-Variable', sans-serif;
+    font-family: var(--main-font), sans-serif;
   }
 }
 
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font), sans-serif;
   font-weight: var(--main-text-wght);
-  color: var(--accent-color);
+  color: var(--accent-color), #000000;
   background: var(--bg-image),
   repeating-linear-gradient(to right, var(--grad-color-first) 2px, transparent 2px),
   repeating-linear-gradient(to bottom, var(--grad-color-first) 2px, transparent 2px),
@@ -39,12 +39,12 @@
 }
 
 .header {
-  inline-size: clamp(23.4375rem, 17.7054rem + 28.6607vw, 43.5rem);
-  background-color: var(--bg-color, #FFFFFF);
-  block-size: 23rem;
+  inline-size: clamp(23.4375rem, 16.3292rem + 30.3286vw, 43.625rem);
+  background-color: var(--bg-color), #FFFFFF;
+  block-size: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
   margin: auto;
   margin-block-end: 100px;
-  border: 2px solid var(--accent-color, #000000);
+  border: 2px solid var(--accent-color), #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,13 +52,13 @@
 
 .header-heading__main,
 .header-heading__secondary {
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font), fantasy;
   text-transform: uppercase;
 }
 
 .header-heading__main {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  margin-block-start: 8.5rem;
+  margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   margin-block-end: 20px;
 }
 
@@ -77,7 +77,7 @@
   gap: 14px;
   font-size: 14px;
   line-height: 1;
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font), fantasy;
 }
 
 .theme-menu__button {
@@ -133,12 +133,12 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  inline-size: clamp(23.4375rem, 17.7054rem + 28.6607vw, 43.5rem);
+  inline-size: clamp(23.4375rem, 16.3292rem + 30.3286vw, 43.625rem);
 }
 
 .card__section {
-  border: 2px solid var(--accent-color);
-  background-color: var(--bg-color);
+  border: 2px solid var(--accent-color), #000000;
+  background-color: var(--bg-color), #FFFFFF;
   margin-block-end: 50px;
   position: relative;
 }
@@ -148,12 +148,12 @@
   font-size: 18px;
   font-weight: var(--header-text-wght);
   line-height: 1.2;
-  border-block-end: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color), #000000;
 }
 
 .img-container {
   block-size: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
-  border-block-end: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color), #000000;
   margin-block-end: 25px;
   position: relative;
 }
@@ -198,7 +198,7 @@
 }
 
 .card__image-label {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   text-transform: uppercase;
   mix-blend-mode: hard-light;
@@ -251,20 +251,20 @@
 
 .card__icon-button:focus-visible {
   outline: none;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color), #000000;
   block-size: 38px;
   transition: 0.3s ease;
 }
 
 .card__like-button {
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color), #000000;
   inline-size: 8.125rem;
   block-size: 2.375rem;
 }
 
 .save-button {
-  border: 2px solid var(--accent-color);
-  background: var(--bg-color);
+  border: 2px solid var(--accent-color), #000000;
+  background: var(--bg-color), #FFFFFF;
   display: flex;
   flex-direction: row;
   gap: 8px;
@@ -282,7 +282,7 @@
 }
 
 .button-text {
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   text-align: center;
   align-self: center;
@@ -292,9 +292,10 @@
 }
 
 .card__like-button:focus-visible,
-.save-button:focus-visible {
+.save-button:focus-visible,
+.close-button:focus-visible {
   outline: none;
-  box-shadow: 2px 2px 0 var(--accent-color);
+  box-shadow: 2px 2px 0 var(--accent-color), #000000;
   transition: 0.3s ease;
 }
 
@@ -309,7 +310,7 @@
 	inset-inline-start: 0;
 	inline-size: 0;
 	block-size: 100%;
-	background-color: var(--accent-color);
+	background-color: var(--accent-color),#000000;
 	transition: 0.5s ease-in-out;
 }
 
@@ -388,13 +389,17 @@
 
 dialog[open] {
   padding: 30px;
+  background-color: var(--bg-color), #FFFFFF;
+  border: 2px solid var(--accent-color), #000000;
+}
+
+.modal-dialog {
   display: grid;
   grid-template-areas: "disket text"
   "button button";
   grid-column-gap: 20px;
   grid-row-gap: 30px;
-  background-color: var(--bg-color);
-  border: 2px solid var(--accent-color);
+  background-color: var(--bg-color), #FFFFFF;
 }
 
 dialog::backdrop {
@@ -404,15 +409,15 @@ dialog::backdrop {
 .save-icon-modal {
   inline-size: 39px;
   block-size: 39px;
-  color: var(--accent-color);
+  color: var(--accent-color), #000000;
   grid-area: disket;
   align-self: center;
 }
 
 .modal-text {
   text-transform: uppercase;
-  color: var(--accent-color);
-  font-family: var(--accent-font);
+  color: var(--accent-color), #000000;
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   inline-size: clamp(12.375rem, 11.5827rem + 3.3803vw, 14.625rem);
   line-height: 1.5;
@@ -420,9 +425,10 @@ dialog::backdrop {
 }
 
 .close-button {
-  border: 2px solid var(--accent-color);
-  font-family: var(--accent-font);
-  background: var(--bg-color);
+  border: 2px solid var(--accent-color), #000000;
+  font-family: var(--accent-font), fantasy;
+  text-transform: uppercase;
+  background: var(--bg-color), #FFFFFF;
   padding: 7px 15px;
   text-align: center;
   inline-size: 100%;
@@ -434,5 +440,14 @@ dialog::backdrop {
   .save-button {
     display: flex;
     flex-direction: column;
+  }
+
+  .save-icon {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+
+  dialog[open] {
+    padding-inline: 40px;
   }
 }
