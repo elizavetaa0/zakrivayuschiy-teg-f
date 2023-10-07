@@ -23,7 +23,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   font-weight: var(--main-text-wght);
   color: var(--accent-color, #000000);
   background: var(--bg-image),
@@ -282,7 +282,7 @@
   mix-blend-mode: difference;
 }
 
-.button-text {
+.button__text {
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
   text-align: center;
